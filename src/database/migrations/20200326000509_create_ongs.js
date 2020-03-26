@@ -1,5 +1,7 @@
+// eslint-disable-next-line func-names
 exports.up = function (knex) {
-  knex.schema.createTable('ongs', function (table) {
+  // eslint-disable-next-line func-names
+  return knex.schema.createTable('ongs', function (table) {
     table.string('id').primary();
     table.string('name').notNullable();
     table.string('email').notNullable();
@@ -9,6 +11,7 @@ exports.up = function (knex) {
   });
 };
 
+// eslint-disable-next-line func-names
 exports.down = function (knex) {
-  knex.schema.dropTable('ongs');
+  return knex.schema.dropTable('ongs');
 };
